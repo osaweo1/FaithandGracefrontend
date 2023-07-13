@@ -35,8 +35,8 @@ function Login() {
         const response=await axios.post(`${URL}/blog/login`,userValue)
         console.log(response)
         if(response.status===200){
-            
-            navigate('/')
+            window.location.href=`${URL}`
+            // navigate('/')
             
         }else{
            setMessage(response.data.Error)
