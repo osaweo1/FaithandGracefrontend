@@ -3,9 +3,9 @@ import JoditEditor from 'jodit-react'
 import { useParams } from "react-router-dom";
 import axios from "axios";
 // import parse from 'html-react-parser'
-import {URL} from '../App'
+// import {URL} from '../App'
 
-
+const URL=process.env.REACT_APP_FAITHGRACE_URL
 
 const EditBlog=()=>{
     const {id}=useParams()

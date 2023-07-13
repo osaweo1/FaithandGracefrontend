@@ -3,9 +3,9 @@ import React from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 // import Cookies from 'universal-cookie'
-import {URL} from '../App'
+// import {URL} from '../App'
 
-
+const URL=process.env.REACT_APP_FAITHGRACE_URL
 
 function Login() {
     const navigate=useNavigate()

@@ -3,6 +3,7 @@ import JoditEditor from 'jodit-react';
 import axios from 'axios'
 // import { useNavigate } from "react-router-dom";
 import { useGlobalContext ,appContext} from "../context"
+const URL=process.env.REACT_APP_FAITHGRACE_URL
 
 const PostBlog=()=>{
     const {user}=useGlobalContext(appContext)

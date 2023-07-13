@@ -2,10 +2,10 @@ import axios from 'axios';
 import React, {  useRef, useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import {URL} from '../App'
+// import {URL} from '../App'
 
 // import Validationcheck from '../validations/validation.js'
-
+const URL=process.env.REACT_APP_FAITHGRACE_URL
 function SignUp() {
     const [userValue,setUserValue]=useState({
         username:'',

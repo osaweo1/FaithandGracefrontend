@@ -4,8 +4,8 @@ import parse from 'html-react-parser'
 import axios from "axios"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import {format} from 'date-fns'
-import {URL} from '../App'
-
+// import {URL} from '../App'
+const URL=process.env.REACT_APP_FAITHGRACE_URL
 const Articledetail=()=>{
     const {id}=useParams()
     // console.log(id)
