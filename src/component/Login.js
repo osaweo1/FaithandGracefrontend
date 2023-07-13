@@ -1,11 +1,14 @@
 import { useState,useRef } from "react";
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 // import Cookies from 'universal-cookie'
 import {URL} from '../context'
+
+
+
 function Login() {
-    // const navigate=useNavigate()
+    const navigate=useNavigate()
     // const navigate=useNavigate()
     const [userValue,setUserValue]=useState({
         username:'',
@@ -32,8 +35,8 @@ function Login() {
         const response=await axios.post(`${URL}/blog/login`,userValue)
         console.log(response)
         if(response.status===200){
-            window.location.href='/'
-        //     // navigate('/')
+            
+            navigate('/')
             
         }else{
            setMessage(response.data.Error)
