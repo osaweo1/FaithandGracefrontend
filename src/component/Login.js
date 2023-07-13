@@ -29,7 +29,7 @@ function Login() {
     axios.defaults.withCredentials=true
     const loginFunction=async(e)=>{
         e.preventDefault()
-        const response=await axios.post(`/blog/login`,userValue)
+        const response=await axios.post(`${URL}/blog/login`,userValue)
         console.log(response)
         if(response.status===200){
             window.location.href='/'
