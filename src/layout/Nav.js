@@ -5,10 +5,10 @@ import {  useState, } from "react"
 // import Cookies from 'js-cookie';
 import axios from "axios";
 import { useGlobalContext ,appContext} from "../context"
-
+import {URL} from '../context.js'
 
 const Nav=()=>{
-    const navigate=useNavigate()
+    // const navigate=useNavigate()
     // const [users,setUsers]=useState(null)
     // const {blogs}=useGlobalContext()
     const [fix , setfix]= useState(false)
@@ -32,7 +32,7 @@ const Nav=()=>{
     window.addEventListener('scroll',setFixedNavbar)
     axios.defaults.withCredentials=true
     const logout=async ()=>{
-       const response=await axios.get('http://localhost:5000/logout')
+       const response=await axios.get(`${URL}/logout`)
     //    console.log(response)
        if(response.status===200){
         
