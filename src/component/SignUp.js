@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, {  useRef, useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import {URL} from '../context'
+import {URL} from '../App'
 
 // import Validationcheck from '../validations/validation.js'
 

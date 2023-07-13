@@ -3,8 +3,8 @@ import axios from 'axios'
 import {useState,useEffect} from 'react'
 
 // import { useParams } from 'react-router-dom'
-export const URL=process.env.REACT_APP_FAITHGRACE_URL
-// import {URL }from './context'
+
+import {URL }from './App'
 
 
 const appContext=React.createContext()

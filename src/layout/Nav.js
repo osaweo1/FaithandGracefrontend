@@ -5,7 +5,7 @@ import {  useState, } from "react"
 // import Cookies from 'js-cookie';
 import axios from "axios";
 import { useGlobalContext ,appContext} from "../context"
-import {URL} from '../context.js'
+import {URL} from '../App'
 
 const Nav=()=>{
     // const navigate=useNavigate()

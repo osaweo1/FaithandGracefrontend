@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 // import Cookies from 'universal-cookie'
-import {URL} from '../context'
+import {URL} from '../App'
 
 
 
@@ -35,7 +35,7 @@ function Login() {
         const response=await axios.post(`${URL}/blog/login`,userValue)
         console.log(response)
         if(response.status===200){
-            window.location.href=`/`
+            window.location.href='/'
             // navigate('/')
             
         }else{

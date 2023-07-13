@@ -3,7 +3,7 @@ import JoditEditor from 'jodit-react'
 import { useParams } from "react-router-dom";
 import axios from "axios";
 // import parse from 'html-react-parser'
-import {URL} from '../context'
+import {URL} from '../App'
 
 
 

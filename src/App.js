@@ -12,8 +12,8 @@ import SignUp from "./component/SignUp";
 import Login from './component/Login'
 import EditBlog from './component/EditBlog';
 
+export const URL=process.env.REACT_APP_FAITHGRACE_URL
 
-export const URL=process.env.FAITHGRACE_URL
 function App() {
   
 

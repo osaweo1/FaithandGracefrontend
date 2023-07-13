@@ -4,7 +4,7 @@ import parse from 'html-react-parser'
 import axios from "axios"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import {format} from 'date-fns'
-import {URL} from '../context'
+import {URL} from '../App'
 
 const Articledetail=()=>{
     const {id}=useParams()
