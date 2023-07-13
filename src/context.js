@@ -4,7 +4,7 @@ import {useState,useEffect} from 'react'
 
 // import { useParams } from 'react-router-dom'
 
-import {URL }from './App'
+const URL=process.env.REACT_APP_FAITHGRACE_URL
 
 
 const appContext=React.createContext()
