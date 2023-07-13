@@ -15,7 +15,7 @@ const Nav=()=>{
     // const [login,setLogin]=useState(false)
     // console.log(login)
     const {user}=useGlobalContext(appContext)
-    // console.log(user)
+    console.log(user)
     // const auth=Cookies.get('token')
         
     
