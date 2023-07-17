@@ -1121,7 +1121,7 @@ body{
     .subhome {
         width: 100%;
         /* border: #23aabb solid 1px; */
-        /* padding: 0 10px; */
+        padding: 0 0px;
         margin-top: 200px;
 /*        
         display: grid;
@@ -1141,6 +1141,7 @@ body{
       /* padding-bottom: 20px;
       padding-top: 20px; */
       overflow-y: auto;
+      overflow-x: none;
      
     }
     .article-list {
@@ -1152,7 +1153,19 @@ body{
       overflow-y: auto;
       
       /* position: relative; */
-  }
-  
+    }
+    .blog-article h2 {
+     font: .5rem;
+    }
+    .bloglinks {
+      font-size: .7em;
+    }
+    .blog-article p {
+      font-size: .5rem;
+    
+    }
+    .blog-article .com-details .p {
+      font-size: .5rem;
+    }
 
 }
