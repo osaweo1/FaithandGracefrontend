@@ -100,7 +100,7 @@ const Articledetail=()=>{
                             singleBlog.comments.map(comment=>(
                                 
                                 <div className="singleComment" key={comment._id}>
-                                    <p>{comment.author}: <span>{comment.commentText}</span>,<span>{format (new Date(comment.date),'d LLL,yyy')}</span></p>
+                                    <p>{comment.author}<span>({format (new Date(comment.date),'d LLL,yyy')})</span>: <span>{comment.commentText}</span></p>
                                     
                                 </div>
                                 
