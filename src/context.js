@@ -17,6 +17,8 @@ const AppProvider=({children})=>{
   const [single,setSingle]=useState()
   const [path,setPath]=useState('')
   const [user,setUser]=useState(null)
+  const [menu,setMenu]=useState(false)
+  console.log(menu)
     
   useEffect(()=>{
       const fetchdata=async ()=>{
@@ -78,7 +80,7 @@ const AppProvider=({children})=>{
             profileFunc()
         },[])
     return(
-        <appContext.Provider value={{blogs,single,user,setPath}}>
+        <appContext.Provider value={{blogs,single,user,setPath,menu,setMenu}}>
             {children}
         </appContext.Provider>
     )

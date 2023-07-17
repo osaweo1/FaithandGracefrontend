@@ -20,8 +20,9 @@ body{
   padding: 10px 80px;
   box-shadow: -2px 2px 2px -2px rgba(0, 0, 0, 0.3);
   display: flex;
-  align-items: center;
+  align-items:flex-start;
   background-color: #fbfcfc;
+  justify-content:space-between;
 }
 .logo h1{
   display: flex;
@@ -942,6 +943,8 @@ body{
     position: relative;
     padding-bottom: 20px;
     padding-top: 20px;
+    overflow-y: none;
+    overflow-x: auto;
   }
   .article-lists .check {
     display: grid;
@@ -989,4 +992,36 @@ body{
     padding: 0 5px;
    
   }
+}
+@media only screen and (min-width: 480px ) and (max-width:600px) {
+
+  .header {
+    /* border: #23aabb solid 1px; */
+    height: 12vh;
+    padding: 10px 38px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobileLogo{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    /* border: 1px solid; */
+  }
+  .mobileLogo img{
+    width: 100%;
+  }
+  .logo{
+    width: 110px;
+  }
+  .logo h1 {
+    
+    font-size: 1em;
+   
+  }
+  .logo h1 .logo-name {
+    font-size: .7rem;
+    margin-top: 5px;
+  } 
+
 }
