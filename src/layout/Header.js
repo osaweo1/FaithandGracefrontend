@@ -2,10 +2,10 @@ import { useGlobalContext } from "../context"
 
 
 const Header=()=>{
-    const{setMenu}=useGlobalContext()
+    const{setMenu, menu}=useGlobalContext()
 
     const controlMenu=()=>{
-        setMenu(true)
+        setMenu(!menu)
     }
     return(
         <header className="header">
