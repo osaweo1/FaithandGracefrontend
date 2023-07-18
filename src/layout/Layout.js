@@ -13,9 +13,8 @@ const Layout=()=>{
     return(
         <>
         <Header/>
-        {menu &&
+        
         <Nav/>
-        }
         <Outlet/>
         <Subhome/>
         <Footer/>

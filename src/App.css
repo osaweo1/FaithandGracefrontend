@@ -131,6 +131,10 @@ body{
   outline: none;
   
 }
+.mobileLogo{
+  display: none;
+  
+}
 .footer{
   
   
@@ -898,7 +902,7 @@ body{
   .nav {
 
     justify-content: space-evenly;
-    
+    z-index: 100;
     padding: 10px 10px;
   }
   .navigation{
@@ -1009,9 +1013,13 @@ body{
     height: 30px;
     position: relative;
     /* border: 1px solid; */
+    cursor: pointer;
+    display: block;
+    
   }
   .mobileLogo img{
     width: 100%;
+    cursor: pointer;
   }
   .logo{
     width: 110px;
@@ -1031,10 +1039,10 @@ body{
     position: absolute;
     padding: 0px 0px;
     z-index: 100;
-    height: 40%;
+    height: 60%;
     margin-top:20;
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
 
   }
@@ -1325,5 +1333,13 @@ body{
       height: 20px;
       padding: 0;
       text-align: center;
+    }
+    .blogForm {
+      /* height: 800px; */
+      
+      padding: 10px 5px;
+    }
+    .nav.menunav{
+      display: flex;
     }
 }

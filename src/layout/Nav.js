@@ -44,7 +44,7 @@ const Nav=()=>{
     return(
         
         
-            <nav className={fix ? 'nav fixed':'nav'}>
+            <nav className={ menu ? 'nav menunav':'nav'}>
                 <div className="navigation">
                     <ul>
                         <li><Link className="a" to='/'>Home</Link></li> 
