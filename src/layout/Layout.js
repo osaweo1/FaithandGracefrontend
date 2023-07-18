@@ -6,12 +6,16 @@ import Nav from './Nav'
 // import {Routes} from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
 import Subhome from '../component/Subhome'
+import { appContext, useGlobalContext } from '../context'
 
-const layout=()=>{
+const Layout=()=>{
+    const {menu}=useGlobalContext(appContext)
     return(
         <>
         <Header/>
+        {menu &&
         <Nav/>
+        }
         <Outlet/>
         <Subhome/>
         <Footer/>
@@ -20,4 +24,4 @@ const layout=()=>{
     )
 }
 
-export default layout
+export default Layout

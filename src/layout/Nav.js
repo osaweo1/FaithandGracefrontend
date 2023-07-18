@@ -14,7 +14,7 @@ const Nav=()=>{
     const [fix , setfix]= useState(false)
     // const [login,setLogin]=useState(false)
     // console.log(login)
-    const {user}=useGlobalContext(appContext)
+    const {user,menu}=useGlobalContext(appContext)
     console.log(user)
     // const auth=Cookies.get('token')
         
@@ -42,48 +42,52 @@ const Nav=()=>{
     }
    
     return(
-        <nav className={fix ? 'nav fixed':'nav'}>
-            <div className="navigation">
-                <ul>
-                    <li><Link className="a" to='/'>Home</Link></li> 
-                    <li><Link className="a" to='/about'>About</Link></li>
-                    <li><Link className="a" to='/contact'>Contact</Link></li>
-                    { user &&
-                    <li><Link className="a" to='/postarticle'>Post Article</Link></li> 
-                    
-                    }
+        
+        
+            <nav className={fix ? 'nav fixed':'nav'}>
+                <div className="navigation">
+                    <ul>
+                        <li><Link className="a" to='/'>Home</Link></li> 
+                        <li><Link className="a" to='/about'>About</Link></li>
+                        <li><Link className="a" to='/contact'>Contact</Link></li>
+                        { user &&
+                        <li><Link className="a" to='/postarticle'>Post Article</Link></li> 
+                        
+                        }
 
+                        
+                        
+                    </ul>
                     
-                    
-                </ul>
+                </div>
                 
-            </div>
-            
-            <div className="navigation authentication-div">
-                <ul>
+                <div className="navigation authentication-div">
+                    <ul>
+                        
+                        { user ?
+                            <div className="check-auth">
+                            {user&&<li className="b">@{user.username}</li>}
+                            <li className="a" onClick={logout}> Logout</li> 
+                            </div>
+                            :
+                            <div className="check-auth">
+                            <li><Link className="a" to='/Login'>Login</Link></li> 
+                            <li><Link className="a" to='/SignUp'>Sign Up</Link></li>
+                            </div>
                     
-                    { user ?
-                        <div className="check-auth">
-                        {user&&<li className="b">@{user.username}</li>}
-                        <li className="a" onClick={logout}> Logout</li> 
-                        </div>
-                        :
-                        <div className="check-auth">
-                        <li><Link className="a" to='/Login'>Login</Link></li> 
-                        <li><Link className="a" to='/SignUp'>Sign Up</Link></li>
-                        </div>
-                   
-                    }
-                    
-                </ul>
-            </div>
-            <div className="search">
-                <input type="text" placeholder="Search Blog.." />
-                <button><img className="search-logo" src="icon\search.png" alt=""/></button>
-            </div>
-            
-            
-        </nav>
+                        }
+                        
+                    </ul>
+                </div>
+                <div className="search">
+                    <input type="text" placeholder="Search Blog.." />
+                    <button><img className="search-logo" src="icon\search.png" alt=""/></button>
+                </div>
+                
+                
+            </nav>
+        
+        
     )
 }
 

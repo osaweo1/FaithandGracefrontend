@@ -79,17 +79,22 @@ const Articledetail=()=>{
                 </div>
                 <div className="articledetails">
                     <div className="editdelete">
+                        <div className="sep">
                         <h3>{singleBlog.title}</h3>
+                        <p className="nameDate"><span> Create By:{singleBlog.createdBy.username}</span>, Created At :{format (new Date(singleBlog.date),'d LLL,yyy')}</p>
+                        </div>
                         {chechEdit &&
                         <div className="edit">
                         <Link to={`/blog/${singleBlog._id}/edit`} className="editButton">Edit Article</Link>
+                        
                         <button className="deleteButton" onClick={deleteSingleData}>delete Article</button>
                         </div>
                         }
                     </div>
-                    
-                    <p className="nameDate"><span> Create By:{singleBlog.createdBy.username}</span>, Created At :{format (new Date(singleBlog.date),'d LLL,yyy')}</p>
-                    {parse(`${singleBlog.content}`)}
+                    <div>
+                        
+                        {parse(`${singleBlog.content}`)}
+                    </div>
                 </div>
                 <h3 className="h3">Comments:</h3>
                 <div className="commentall">
