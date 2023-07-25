@@ -27,7 +27,7 @@ const PostBlog=()=>{
 		}),
 		[placeholder]
 	);
-    console.log(postData)
+    // console.log(postData)
     const postvalue=(e)=>{
         setPostData({...postData,[e.target.name]: e.target.value})
         // console.log(e.target.value)
@@ -43,9 +43,9 @@ const PostBlog=()=>{
     const submitpost=async(e)=>{
         e.preventDefault()
         const formdata=new FormData(form.current)
-        console.log(formdata)
+        // console.log(formdata)
         formdata.append('image', postImage.image)
-        console.log(formdata)
+        // console.log(formdata)
         try {
             const response=await axios.post(`${URL}/blog/article`,formdata)
             if(response){
